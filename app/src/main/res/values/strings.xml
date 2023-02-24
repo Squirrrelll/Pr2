@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">VetClinica</string>
+    <string name="app_name">Vet Pet</string>
+    <string name="registrarte">Вход в аккаунт</string>
 </resources>
