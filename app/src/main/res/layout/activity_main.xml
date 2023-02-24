@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.067"/>
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/etPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone"
         app:layout_constraintVertical_bias="0.049" />
 
     <Button
@@ -104,5 +104,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/fb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="164dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnreg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
