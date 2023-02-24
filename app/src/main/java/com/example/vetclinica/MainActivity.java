@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener ClickLog = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Log.i(TAG, "You clicked the button!");
+            Log.i(TAG, "Программно");
         }
     };
     public void GoLog(View V) {
-        Log.i(TAG, "You clicked the button!");
+        Log.i(TAG, "Декларативно");
     }
 }
