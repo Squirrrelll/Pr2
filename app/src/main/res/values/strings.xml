@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Vet Pet</string>
+    <string name="phone">Телефон</string>
+    <string name="password">Пароль</string>
     <string name="registrarte">Вход в аккаунт</string>
+    <string name="text_reg">Нет аккаунта?</string>
+    <string name="btn_entry">Войти</string>
+    <string name="btn_reg">Зарегистрируйся</string>
 </resources>
