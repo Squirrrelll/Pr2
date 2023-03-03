@@ -1,147 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:id="@+id/linearl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-
-        <ImageButton
-            android:id="@+id/btnappoint"
+        <TextView
+            android:textAlignment="center"
+            android:layout_margin="55dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/symbol" />
+            android:text="@string/text_log_in_account"
+            android:textSize="36sp"/>
 
-        <ImageButton
-            android:id="@+id/btnprof"
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_marginBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:onClick="GoLog"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/profile" />
+            android:hint="@string/hint_phone"
+            android:inputType="phone"
+            android:textSize="24sp"
+            android:ems="10"
+            android:minHeight="48dp"
+            />
 
-        <ImageButton
-            android:id="@+id/btnmyappoimt"
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_marginBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/paper" />
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textSize="24sp"
+            android:ems="10"
+            android:minHeight="48dp"
+            />
+
+        <Button
+            android:id="@+id/btn_log_in"
+            android:textSize="24sp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_log_in"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_register"
+            android:textSize="34sp"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:textSize="24sp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_register"
+            />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:layout_margin="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registrarte"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057" />
-
-    <TextView
-        android:id="@+id/tv_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/text_reg"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnreg" />
-
-    <Button
-        android:id="@+id/btn_reg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_reg"
-        app:layout_constraintBottom_toBottomOf="@+id/fb1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_reg"
-        app:layout_constraintVertical_bias="0.226" />
-
-    <Button
-        android:id="@+id/btnreg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="165dp"
-        android:text="@string/btn_entry"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:layout_constraintVertical_bias="0.014" />
-
-    <EditText
-        android:id="@+id/etPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Телефон"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.008" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Пароль"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone"
-        app:layout_constraintVertical_bias="0.025" />
+        android:layout_below="@+id/linearl"
+        app:srcCompat="@drawable/log_in" />
 
 
-    <TextView
-        android:id="@+id/fb1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="164dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnreg"
-        app:layout_constraintVertical_bias="1.0" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

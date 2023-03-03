@@ -12,18 +12,22 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.vetclinica.databinding.ActivityMainBinding;
+
 import java.net.IDN;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "TAG";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.btnreg.setText("sdfghj");
         //Пункт 3
+
         Button btnEnter = (Button) findViewById(R.id.btnreg); //кнопка "Войти"
         TextView textView = (TextView) findViewById(R.id.textView);
         EditText etPhone = (EditText) findViewById(R.id.etPhone); //ввод номера телефона
