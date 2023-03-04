@@ -31,23 +31,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         //Пункт 3
-        EditText etPhone = (EditText) findViewById(R.id.etPhone);
-        EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        Button btnLogIn = (Button) findViewById(R.id.btn_log_in);
-        Button btnRegister = (Button) findViewById(R.id.btn_register);
-        TextView textInfo1 = (TextView) findViewById(R.id.text_info_1);
-
-
-
+      //  EditText etPhone = (EditText) findViewById(R.id.etPhone);
+      //  EditText etPassword = (EditText) findViewById(R.id.etPassword);
+      //  Button btnLogIn = (Button) findViewById(R.id.btn_log_in);
+      //  Button btnRegister = (Button) findViewById(R.id.btn_register);
 
         //Пункт 6
-       // textView = (TextView) findViewById(R.id.fb1);
+        TextView textInfo1 = (TextView) findViewById(R.id.text_info_1);
+        Intent intent = getIntent();
+        String clickCatNum = intent.getStringExtra("clickCat");
+        textInfo1.setText("На котика нажали: "+clickCatNum+" раза");
+
+
+        //textView = (TextView) findViewById(R.id.fb1);
        // Intent intent = getIntent();
        // String name = intent.getStringExtra("namePet");
        // textView.setText(name);
 
         //Пункт 4
-        btnLogIn.setOnClickListener(ClickLog);
+        binding.btnLogIn.setOnClickListener(ClickLog);
     }
     View.OnClickListener ClickLog = new View.OnClickListener() {
         @Override
