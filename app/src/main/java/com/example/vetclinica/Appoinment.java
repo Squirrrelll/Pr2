@@ -46,7 +46,7 @@ public class Appoinment extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(Appoinment.this, MainActivity.class);
-            intent.putExtra("clickCat", num);
+            intent.putExtra("clickCat", String.valueOf(num));
             startActivity(intent);
         }
     };
