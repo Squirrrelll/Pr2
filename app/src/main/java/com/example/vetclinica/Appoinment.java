@@ -32,16 +32,14 @@ public class Appoinment extends AppCompatActivity {
 
 
         //Пункт 6
+
         TextView textInfo2 = (TextView) findViewById(R.id.text_info_2);
         Intent intent = getIntent();
         String phone = intent.getStringExtra("phone");
         textInfo2.setText("Ваш номер телефона: " + phone);
-
         btnBack.setOnClickListener(ClickBack);
         btnCat.setOnClickListener(ClickCat);
-
     }
-
     View.OnClickListener ClickBack = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -50,7 +48,6 @@ public class Appoinment extends AppCompatActivity {
             startActivity(intent);
         }
     };
-
     View.OnClickListener ClickCat = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
