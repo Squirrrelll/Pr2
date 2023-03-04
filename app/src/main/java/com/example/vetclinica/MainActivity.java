@@ -3,6 +3,7 @@ package com.example.vetclinica;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -20,34 +21,33 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "TAG";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Пункт 5
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.btnreg.setText("sdfghj");
+
         //Пункт 3
+        EditText etPhone = (EditText) findViewById(R.id.etPhone);
+        EditText etPassword = (EditText) findViewById(R.id.etPassword);
+        Button btnLogIn = (Button) findViewById(R.id.btn_log_in);
+        Button btnRegister = (Button) findViewById(R.id.btn_register);
+        TextView textInfo1 = (TextView) findViewById(R.id.text_info_1);
 
-        Button btnEnter = (Button) findViewById(R.id.btnreg); //кнопка "Войти"
-        TextView textView = (TextView) findViewById(R.id.textView);
-        EditText etPhone = (EditText) findViewById(R.id.etPhone); //ввод номера телефона
-        EditText etPassword = (EditText) findViewById(R.id.editTextTextPassword); //ввод пароля
 
-        btnEnter.setText(R.string.registrarte);
-        etPhone.setHint(R.string.phone);
-        etPassword.setHint(R.string.password);
+
 
         //Пункт 6
-        textView = (TextView) findViewById(R.id.fb1);
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("namePet");
-        textView.setText(name);
+       // textView = (TextView) findViewById(R.id.fb1);
+       // Intent intent = getIntent();
+       // String name = intent.getStringExtra("namePet");
+       // textView.setText(name);
 
         //Пункт 4
-        btnEnter.setOnClickListener(ClickLog);
-
-
-        //Пункт 5
+        btnLogIn.setOnClickListener(ClickLog);
     }
     View.OnClickListener ClickLog = new View.OnClickListener() {
         @Override
